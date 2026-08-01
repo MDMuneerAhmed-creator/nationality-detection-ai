@@ -1,0 +1,6 @@
+{
+  "name": "Nationality Detection AI",
+  "description": "Custom Scratch-Trained CNN AI System for Nationality, Emotion, Age, and Dress Colour Prediction",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

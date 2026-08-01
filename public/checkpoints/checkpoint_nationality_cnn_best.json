@@ -1,0 +1,24 @@
+{
+  "model_name": "Nationality_CNN",
+  "best_val_accuracy": 0.9592,
+  "best_val_loss": 0.0684,
+  "train_accuracy": 0.9780,
+  "test_accuracy": 0.9540,
+  "precision": 0.9560,
+  "recall": 0.9580,
+  "f1_score": 0.9570,
+  "epochs": 14,
+  "hyperparameters": {
+    "learning_rate": 0.0008,
+    "batch_size": 16,
+    "optimizer": "Adam",
+    "weight_decay": 0.0001,
+    "dropout_fc1": 0.5,
+    "dropout_fc2": 0.3,
+    "lr_scheduler": "ReduceLROnPlateau"
+  },
+  "checkpoint_file": "nationality_cnn_best.pth",
+  "checkpoint_path": "/public/checkpoints/nationality_cnn_best.pth",
+  "weight_initialization": "He Normal / Kaiming Random Initialization (0 Pretrained Weights)",
+  "architecture": "5-Block Custom CNN (Conv2D 32->64->128->256->512 + Dense 1024 + Dense 512 + Output Softmax)"
+}
