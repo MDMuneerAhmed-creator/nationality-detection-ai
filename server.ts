@@ -14,9 +14,9 @@ const __dirname = path.dirname(__filename);
 initDatabase();
 
 // Setup Uploads folder and Multer
-const uploadsDir = path.join(__dirname, "public", "uploads");
-const samplesDir = path.join(__dirname, "public", "samples");
-const checkpointsDir = path.join(__dirname, "public", "checkpoints");
+const uploadsDir = path.join(__dirname, "uploads");
+const samplesDir = path.join(__dirname, "samples");
+const checkpointsDir = path.join(__dirname, "checkpoints");
 
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
@@ -204,7 +204,7 @@ function computeForwardPass(imageKey: string, filename: string = "", filePath: s
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
